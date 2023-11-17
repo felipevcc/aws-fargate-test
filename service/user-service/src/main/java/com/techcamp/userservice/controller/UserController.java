@@ -45,7 +45,7 @@ public class UserController {
       return ResponseEntity.status(HttpStatus.OK).body(createdUser);
     }
 
-    @PutMapping
+    @PutMapping("/{userId}")
     public ResponseEntity<User> updateUser(@RequestBody User user){
         User updatedUser = userService.updateUser(user);
         if(updatedUser == null){
@@ -56,9 +56,9 @@ public class UserController {
         }
     }
     
-    @DeleteMapping
+    @DeleteMapping("/{userId}")
     public ResponseEntity<String> deleteUser(@PathVariable Long userId) {
-      userService.deleteById(userId);
-      return ResponseEntity.status(HttpStatus.OK).body("Usuario eliminado correctamente");
+      String message = userService.deleteById(userId);
+      return ResponseEntity.status(HttpStatus.OK).body(message);
     }
 }

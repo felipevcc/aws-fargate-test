@@ -2,7 +2,6 @@ package com.techcamp.userservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.techcamp.userservice.model.User;
-import com.techcamp.userservice.service.UserService;
 import com.techcamp.userservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +30,12 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-    public void deleteById(Long userId) {
+    public String deleteById(Long userId) {
+        boolean foundUser = userRepository.existsById(userId);
+        if (!foundUser) {
+            return "Usuario no existe";
+        }
         userRepository.deleteById(userId);
+        return "Usuario eliminado correctamente";
     }
 }

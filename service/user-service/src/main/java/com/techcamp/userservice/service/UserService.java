@@ -13,5 +13,5 @@ public interface UserService {
 
     User updateUser(User user);
 
-    void deleteById(Long userId);
+    String deleteById(Long userId);
 }
