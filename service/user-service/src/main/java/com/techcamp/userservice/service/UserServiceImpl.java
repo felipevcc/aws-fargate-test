@@ -15,24 +15,23 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
     
-    User getUserById(Long userId) {
+    public User getUserById(Long userId) {
         return userRepository.findById(userId).orElse(null);
     }
 
-    User createUser(User newUser) {
+    public User createUser(User newUser) {
         return userRepository.save(newUser);
     }
 
-    User updateUser(User user) {
+    public User updateUser(User user) {
         return userRepository.save(user);
     }
 
-    void deleteById(Long userId) {
+    public void deleteById(Long userId) {
         userRepository.deleteById(userId);
     }
 }
