@@ -2,6 +2,11 @@
 
 Test deployment of a simple springboot service on AWS Fargate
 
+Command to build the java project:
+```bash
+./gradlew build
+```
+
 Commands to run the container:
 
 ```bash
