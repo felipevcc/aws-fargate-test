@@ -7,6 +7,28 @@
 	},
 	"item": [
 		{
+			"name": "GetState",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/state",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GetAllUsers",
 			"request": {
 				"method": "GET",
@@ -111,7 +133,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "DeleteUser",
 			"request": {
 				"method": "DELETE",
 				"header": [],

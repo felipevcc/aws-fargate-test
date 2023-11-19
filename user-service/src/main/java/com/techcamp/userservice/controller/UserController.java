@@ -1,5 +1,6 @@
 package com.techcamp.userservice.controller;
 
+import com.techcamp.userservice.dto.StateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.techcamp.userservice.model.User;
 import com.techcamp.userservice.service.UserService;
@@ -16,7 +17,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping()
+    @GetMapping("/state")
+    public ResponseEntity<Object> getApiState() {
+        StateDTO state = new StateDTO();
+        state.setStatus("ok");
+        return ResponseEntity.status(HttpStatus.OK).body(state);
+    }
+
+    @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> user =  userService.getAllUsers();
 
