@@ -23,7 +23,7 @@ Command to configure AWS CLI:
 aws configure
 ```
 
-Command to create a new ECR repository:
+Command to upload the image to the ECR repository:
 
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 173364527511.dkr.ecr.us-east-1.amazonaws.com
