@@ -7,7 +7,7 @@ Command to build the java project:
 ./gradlew build
 ```
 
-Commands to run the container:
+Commands to build the image with the [`Dockerfile`](https://github.com/felipevcc/aws-fargate-test/blob/main/user-service/Dockerfile) and run the container to test its operation:
 
 ```bash
 docker build -t user-service .
