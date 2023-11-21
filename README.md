@@ -33,4 +33,4 @@ docker tag user-service:latest 173364527511.dkr.ecr.us-east-1.amazonaws.com/user
 docker push 173364527511.dkr.ecr.us-east-1.amazonaws.com/user-service:latest
 ```
 
-Here is a complete guide to deploy the service in AWS Fargate: [Guide](https://drive.google.com/file/d/1O3taCwQlVrPi3-F7cn9NKeQsUjZf9c_V/view?usp=sharing)
+Here is a complete guide to deploy the service on AWS Fargate: [Guide](https://drive.google.com/file/d/1O3taCwQlVrPi3-F7cn9NKeQsUjZf9c_V/view?usp=sharing)
